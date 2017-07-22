@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+
+    >
+
+    <include
+        layout="@layout/include_toolbar"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/relativeLayoutAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="If You Are ADMIN , Please Enter Password"
+            />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edittextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:hint="Enter Password"
+            android:inputType="textPassword"
+            />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonSubmitPassword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:text="Submit"
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollLayoutAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:visibility="gone"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edittextTitle"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:hint="Title"
+                android:textColor="@android:color/black"
+                />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edittextDesc"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:hint="Description"
+                android:textColor="@android:color/black"
+                />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edittextDate"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:hint="Date : time"
+                android:textColor="@android:color/black"
+                />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edittextSpeaker"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:hint="Speaker"
+                />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edittextVenue"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:hint="Venue"
+                android:textColor="@android:color/black"
+                />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edittextYoutubeLink"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:hint="Youtube Link"
+                android:textColor="@android:color/black"
+                />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/edittextImageUrl"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:hint="Image Url"
+                android:textColor="@android:color/black"
+                />
+
+            <android.support.v7.widget.AppCompatButton
+                android:id="@+id/buttonSubmit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="Submit"
+                />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

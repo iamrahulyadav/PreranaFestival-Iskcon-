@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    android:id="@+id/toolbarMain"
+    style="@style/toolbarStyle"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorPrimary"
+    >
+
+    <RelativeLayout
+        android:id="@+id/relativeToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        >
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageViewInsertData"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewToolbarTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/title"
+            android:textColor="@android:color/white"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            />
+
+
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageViewNotification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="right"
+            android:paddingEnd="5dp"
+            android:paddingRight="5dp"
+            app:srcCompat="@drawable/ic_notification"
+            />
+    </RelativeLayout>
+</android.support.v7.widget.Toolbar>

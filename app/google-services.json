@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1015196453159",
+    "firebase_url": "https://prerana-festival.firebaseio.com",
+    "project_id": "prerana-festival",
+    "storage_bucket": "prerana-festival.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1015196453159:android:a4169062f9d12265",
+        "android_client_info": {
+          "package_name": "iskcon.preranafestival"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1015196453159-uj6qc18912dr6fhg6apbg2u72a605i8v.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "iskcon.preranafestival",
+            "certificate_hash": "c33ed22755bf1e9d74faa2921453ff8985ac05b9"
+          }
+        },
+        {
+          "client_id": "1015196453159-ksnm4nc0fckqfb6kj7cs9lkugl8gj9o3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDgY6w7cu7Rq7zwW7dizcvzb29iJWWevGA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1015196453159-ksnm4nc0fckqfb6kj7cs9lkugl8gj9o3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
