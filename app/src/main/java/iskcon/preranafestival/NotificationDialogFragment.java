@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import android.view.Window;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import iskcon.preranafestival.adapter.NotificationAdapter;
@@ -61,11 +62,13 @@ public class NotificationDialogFragment extends DialogFragment {
 		Bundle bundle = getArguments();
 		mPreranaNewsList = bundle.getParcelableArrayList( "DATA" );
 
+		Collections.reverse(mPreranaNewsList);
+
 		recyclerViewNotification = ( RecyclerView ) view.findViewById( R.id.recyclerViewNotification );
 		toolbarMain = ( Toolbar ) view.findViewById( R.id.toolbarMain );
 		imageViewNotification = ( AppCompatImageView ) view.findViewById( R.id.imageViewNotification );
 		textViewToolbarTitle = ( AppCompatTextView ) view.findViewById( R.id.textViewToolbarTitle );
-		imageViewNotification.setImageResource( R.mipmap.ic_close );
+		imageViewNotification.setImageResource( R.drawable.ic_close );
 		textViewToolbarTitle.setText( "Notifications" );
 
 		imageViewNotification.setOnClickListener( new View.OnClickListener() {

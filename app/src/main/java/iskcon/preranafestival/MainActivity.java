@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -135,8 +136,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		imageViewNotification.setOnClickListener( this );
 		tvYoutubeLink.setText( Html.fromHtml( ""/*getString( R.string.youtube_link )*/ ) );
 
-		tvYoutubeLink.setText( "Youtube Link : " + defaultLink );
 
+		tvYoutubeLink.setText( "Click Here See Prerana Youth Festivals Videos" );
+
+		tvYoutubeLink.setOnClickListener( new View.OnClickListener() {
+			@Override
+			public void onClick( View view ) {
+				startActivity(new Intent( Intent.ACTION_VIEW, Uri.parse( defaultLink)));
+			}
+		} );
 
 		imageViewInsertData.setOnLongClickListener( new View.OnLongClickListener() {
 			@Override
@@ -161,7 +169,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 		if ( !TextUtils.isEmpty( PreferenceManager.getInstance( MainActivity.this ).getTitle() ) ) {
 			tvDate.setText( PreferenceManager.getInstance( MainActivity.this ).getDate() );
 			tvTopic.setText( PreferenceManager.getInstance( MainActivity.this ).getTitle() );
-			tvSpeakerName.setText( PreferenceManager.getInstance( MainActivity.this ).getSpeaker() );
+			tvSpeakerName.setText( "   "+PreferenceManager.getInstance( MainActivity.this ).getSpeaker() );
 			if ( !TextUtils.isEmpty( PreferenceManager.getInstance( MainActivity.this ).getLink().trim() ) ) {
 				tvYoutubeLink.setText( "Youtube Link : " + Html.fromHtml( PreferenceManager.getInstance( MainActivity.this ).getLink() ) );
 			}
@@ -245,7 +253,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 	public void onClick( View view ) {
 		switch ( view.getId() ) {
 			case R.id.imageViewNotification:
-				NotificationDialogFragment.newInstance( preranaNewsList ).show( getSupportFragmentManager(), "" );
+				if(CommonUtils.isInternetAvailable( MainActivity.this )) {
+					NotificationDialogFragment.newInstance( preranaNewsList ).show( getSupportFragmentManager(), "" );
+				}
+				else{
+					showErrorMessage();
+				}
 				break;
 			case R.id.fabShare:
 				shareApplication();
@@ -262,11 +275,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 			if ( !TextUtils.isEmpty( PreferenceManager.getInstance( MainActivity.this ).getTitle() ) ) {
 				tvDate.setText( PreferenceManager.getInstance( MainActivity.this ).getDate() );
 				tvTopic.setText( PreferenceManager.getInstance( MainActivity.this ).getTitle() );
-				tvSpeakerName.setText( PreferenceManager.getInstance( MainActivity.this ).getSpeaker() );
+				tvSpeakerName.setText( "   "+PreferenceManager.getInstance( MainActivity.this ).getSpeaker() );
 
 				if ( !TextUtils.isEmpty( PreferenceManager.getInstance( MainActivity.this ).getLink().trim() ) ) {
-					tvYoutubeLink.setText( "Youtube Link : " + Html.fromHtml( PreferenceManager.getInstance( MainActivity.this ).getLink() ) );
-
+				//	tvYoutubeLink.setText( "Youtube Link : " + Html.fromHtml( PreferenceManager.getInstance( MainActivity.this ).getLink() ) );
 				}
 				isDataset = true;
 			}

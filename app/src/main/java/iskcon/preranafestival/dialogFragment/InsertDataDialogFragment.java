@@ -75,7 +75,7 @@ public class InsertDataDialogFragment extends DialogFragment implements View.OnC
 		toolbarMain = ( Toolbar ) view.findViewById( R.id.toolbarMain );
 		imageViewNotification = ( AppCompatImageView ) view.findViewById( R.id.imageViewNotification );
 		textViewToolbarTitle = ( AppCompatTextView ) view.findViewById( R.id.textViewToolbarTitle );
-		imageViewNotification.setImageResource( R.mipmap.ic_close );
+		imageViewNotification.setImageResource( R.drawable.ic_close );
 		textViewToolbarTitle.setText( "Admin Section" );
 
 		imageViewNotification.setOnClickListener( new View.OnClickListener() {
